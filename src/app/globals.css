@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+.gradient-text {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Force transform for translate-y utilities */
+[class*='-translate-y-1\\/2'] {
+  transform: translateY(-50%) !important;
+}
+
+/* Force positioning for fixed elements */
+.fixed.left-12 {
+  left: 3rem !important;
+}
+
+.fixed.right-12 {
+  right: 3rem !important;
+}
+
+.fixed.bottom-12 {
+  bottom: 3rem !important;
+}
+
+/* Force nav links to be white, no underline, and inherit button styles */
+.fixed.right-12 a,
+.fixed.right-12 a:visited,
+.fixed.right-12 a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+  /* background: transparent !important; */
+  /* box-shadow: none !important; */
+}
+
+/* Force margin between nav buttons in the bottom right */
+.fixed.right-12 a,
+.fixed.right-32 a {
+  margin-left: 1.5rem !important;
+  left: auto !important;
+}
+.fixed.right-12 a:first-child,
+.fixed.right-32 a:first-child {
+  margin-left: 1.5rem !important;
+  margin-right: 0 !important;
+  left: auto !important;
+}
+
+/* Shimmer hover effect for nav buttons */
+.shimmer-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.shimmer-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #fff 0%, #e0e0e0 40%, #fff 100%);
+  opacity: 0;
+  transition: opacity 0.3s, background-position 0.8s;
+  background-size: 200% 200%;
+  background-position: -100% 0;
+}
+a.shimmer-hover:hover {
+  color: #111 !important;
+}
+.shimmer-hover:hover::before {
+  opacity: 1;
+  background-position: 100% 0;
+  transition: opacity 0.3s, background-position 0.8s;
+}
