@@ -131,10 +131,8 @@ export default function Home() {
         transition={{ delay: 0.6 }}
         className="fixed left-12 bottom-[28vh] z-20"
       >
-        <a
-          href="https://www.youtube.com/watch?v=R-I9MHftIw4"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/showreel"
           className="inline-flex items-center gap-8 text-7xl uppercase tracking-[.35em] border-4 border-white rounded-xl shadow-xl transition-all duration-200 font-black drop-shadow-xl"
           style={{letterSpacing: '0.35em', paddingLeft: '2.5rem', paddingRight: '2.5rem', paddingTop: '1.2rem', paddingBottom: '1.2rem', backgroundColor: 'white', color: 'black'}}
         >
@@ -142,7 +140,7 @@ export default function Home() {
           <svg 
             className="w-10 h-10 ml-4" 
             fill="none" 
-            stroke="white" 
+            stroke="black" 
             viewBox="0 0 24 24"
           >
             <path 
@@ -152,7 +150,7 @@ export default function Home() {
               d="M14 5l7 7m0 0l-7 7m7-7H3" 
             />
           </svg>
-        </a>
+        </Link>
       </motion.div>
 
       {/* Projects/About - bottom right, above social icons */}
