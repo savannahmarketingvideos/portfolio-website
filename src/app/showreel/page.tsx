@@ -303,7 +303,7 @@ export default function ShowreelPage() {
             {/* Education */}
             <div>
               <h3 style={{ fontSize: 20, fontWeight: 700, margin: '16px 0 8px', display: 'flex', alignItems: 'center', gap: 8 }}>🎓 Education</h3>
-              <div style={{ fontWeight: 600 }}>BA (Hons) TV & Film Production – First Class<br /><span style={{ color: '#a3a3a3', fontWeight: 400 }}>University of [Your Uni], 2024</span></div>
+              <div style={{ fontWeight: 600 }}>BA (Hons) TV & Film Production – First Class<br /><span style={{ color: '#a3a3a3', fontWeight: 400 }}>University of Hertfordshire, 2024</span></div>
               <ul style={{ margin: '4px 0 0 18px', color: '#e5e5e5', fontSize: 15 }}>
                 <li>Specialized in editing, storytelling, and visual aesthetics</li>
                 <li>Directed and edited multiple short films and promotional videos</li>
